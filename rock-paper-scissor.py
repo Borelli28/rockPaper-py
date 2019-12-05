@@ -106,7 +106,7 @@ class RockPaper:
 
             #if [Y] restart game(play another game), if [N] entire program ends.
             while True:
-                rawAnswer = input("Want to Play Again[Y] or [N]: ")
+                rawAnswer = input("Want to Play Again[Y] or [N]: \n")
                 answer = rawAnswer.capitalize()
                 if answer in ("Y", "N"):
                     break
