@@ -1,6 +1,5 @@
 import random
 
-
 class Tictactoe:
 
     # ["Rock", "Paper", "Scissors"]
@@ -10,14 +9,17 @@ class Tictactoe:
         self.cpu_pick = 0
         self.cpu_counter = 0
         self.user_counter = 0
+        self.game_counter = 1
 
     # ask and saved user input(rock, paper or scissors) as the index in the options list
     def program(self):
 
         while self.user_counter < 3 and self.cpu_counter < 3:
+            print("Game: {count}\n".format(count=self.game_counter))
             print("Make a Pick: \n")
             raw_userChoice = input("[A] for Rock, [S] for Paper & [D] for Scissors:  ")
             user_input = raw_userChoice.capitalize()
+            print(" ")
 
             if user_input == "A":
                 print("You choose: Rock!")
@@ -34,11 +36,10 @@ class Tictactoe:
             elif user_input != "A" or "S" "D":
                 return "Use A, S or D keys. Try Again!"
 
-            print(self.user_pick)
 
 
             # calculate a cpu pick and saved it in self.cpu_pick as a index number in self.option list
-            print("CPU making a pick...\n")
+            print(" ")
             raw_cpu_pick = random.choice(self.options)
 
             if raw_cpu_pick == 0:
@@ -53,7 +54,7 @@ class Tictactoe:
                 print("CPU choose Scissors!")
                 self.cpu_pick = 2
 
-            print(self.cpu_pick)
+
 
             # Grab Picks and calculate the winner
             print(" ")
@@ -99,7 +100,11 @@ class Tictactoe:
                 self.user_counter += 1
 
             print("You: {usercounter} | CPU: {cpucounter}".format(usercounter=self.user_counter, cpucounter=self.cpu_counter))
-        #
+            print(" ")
+            print("**********************\n")
+            self.game_counter += 1
+
+#
 
         if self.cpu_counter == 3:
             print("CPU Won The Game...\n")
@@ -107,21 +112,8 @@ class Tictactoe:
         else:
             print("You Won The Game!\n")
 
-        
-
-
-
-
 
 # run the game
 classInstance = Tictactoe()
 game = classInstance.program()
 print(game)
-
-
-
-
-# 0         1       2             W       L
-#Rock B. Scissors               0 > 2 but < 1
-#Paper B. Rock                  1 > 0 but < 2
-#Scissors B. Paper              2 > 1 but < 0
