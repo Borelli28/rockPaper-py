@@ -1,7 +1,10 @@
 import random
+import sys
 
-class Tictactoe:
-    
+class RockPaper:
+
+    print("Welcome to this Rock, Paper & Scissor Game!\n")
+
     def __init__(self):
         self.options = ["Rock", "Paper", "Scissors"]
         self.user_pick = ""
@@ -54,10 +57,9 @@ class Tictactoe:
                 self.cpu_pick = "Scissors"
                 print("CPU choose: {pick}!".format(pick=self.cpu_pick))
 
-                
             #Compare both picks and announce the winner. Plus add 1 to the counter of the winner.
             print(" ")
-            #If user pick is invalid then just print the statement
+           #If user pick is invalid then just print the statement
             if self.user_pick == "Invalid":
                 print("User Fucked the Game Up!\n")
 
@@ -96,7 +98,6 @@ class Tictactoe:
                 print("You Won!\n")
                 self.user_counter += 1
 
-                
             #Show current count of both players and also ask(while loop) the user if he want to continue playing.
             print("You: {usercounter} | CPU: {cpucounter}".format(usercounter=self.user_counter, cpucounter=self.cpu_counter))
             print(" ")
@@ -113,10 +114,10 @@ class Tictactoe:
                 continue
             else:
                 print("Thanks for Playing...\n")
-                break
+                sys.exit()
 
 
 #run the game
-classInstance = Tictactoe()
+classInstance = RockPaper()
 game = classInstance.program()
 print(game)
