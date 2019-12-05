@@ -2,7 +2,8 @@ import random
 import sys
 
 class RockPaper:
-
+    #welcome message
+    print("**********************\n")
     print("Welcome to this Rock, Paper & Scissor Game!\n")
 
     def __init__(self):
@@ -113,7 +114,7 @@ class RockPaper:
             if answer == "Y":
                 continue
             else:
-                print("Thanks for Playing...\n")
+                print("Thanks for Playing...GoodBye!\n")
                 sys.exit()
 
 
