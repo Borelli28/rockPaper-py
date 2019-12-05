@@ -57,7 +57,7 @@ class Tictactoe:
                 
             #Compare both picks and announce the winner. Plus add 1 to the counter of the winner.
             print(" ")
-           #If user pick is invalid then just print the statement
+            #If user pick is invalid then just print the statement
             if self.user_pick == "Invalid":
                 print("User Fucked the Game Up!\n")
 
@@ -98,8 +98,7 @@ class Tictactoe:
 
                 
             #Show current count of both players and also ask(while loop) the user if he want to continue playing.
-            print("You: {usercounter} | CPU: {cpucounter}".format(usercounter=self.user_counter,
-                                                                  cpucounter=self.cpu_counter))
+            print("You: {usercounter} | CPU: {cpucounter}".format(usercounter=self.user_counter, cpucounter=self.cpu_counter))
             print(" ")
             print("**********************\n")
 
