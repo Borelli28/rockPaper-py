@@ -3,8 +3,9 @@ import sys
 
 class RockPaper:
     #welcome message
+    print("**********************")
     print("**********************\n")
-    print("Welcome to this Rock, Paper & Scissor Game!\n")
+    print("Welcome to this Game!: Rock, Paper & Scissors\n")
 
     def __init__(self):
         self.options = ["Rock", "Paper", "Scissors"]
@@ -19,21 +20,21 @@ class RockPaper:
         #while loop to play again if user choose [Y]. If [N] program ends.
         while True:
 
-            #Ask user for his choice(Rock, Paper or Scissors). Then print his choice as a str and store the value in user_pick for further use.
+            #Ask user for his choice(Rock, Paper or Scissors). Then print his choice as a str and store the value in Global user_pick for further use.
             print("Make a Pick: \n")
-            raw_userChoice = input("[A] for Rock, [S] for Paper & [D] for Scissors:  ")
+            raw_userChoice = input("[R] for Rock, [P] for Paper & [S] for Scissors:  ")
             user_input = raw_userChoice.capitalize()
             print(" ")
 
-            if user_input == "A":
+            if user_input == "R":
                 self.user_pick = "Rock"
                 print("You choose: {pick}!".format(pick=self.user_pick))
 
-            elif user_input == "S":
+            elif user_input == "P":
                 self.user_pick = "Paper"
                 print("You choose: {pick}!".format(pick=self.user_pick))
 
-            elif user_input == "D":
+            elif user_input == "S":
                 self.user_pick = "Scissors"
                 print("You choose: {pick}!".format(pick=self.user_pick))
 
@@ -42,7 +43,7 @@ class RockPaper:
                 print("ERROR: Invalid Input")
 
 
-            # CPU choose a random pick from options list(rock, paper, scissors), print the cpu pick and store the value in cpu_pick for further use.
+            # CPU choose a random pick from options list(rock, paper, scissors), print the cpu pick and store the value in Global cpu_pick for further use.
             print(" ")
             raw_cpu_pick = random.choice(self.options)
 
@@ -111,7 +112,7 @@ class RockPaper:
                 answer = rawAnswer.capitalize()
                 if answer in ("Y", "N"):
                     break
-                print("invalid Input")
+                print("invalid Input\n")
             if answer == "Y":
                 continue
             else:
