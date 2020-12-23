@@ -63,7 +63,7 @@ class RockPaper:
             print(" ")
            #If user pick is invalid then just print the statement
             if self.user_pick == "Invalid":
-                print("User Fucked the Game Up!\n")
+                print("Invalid Input!\n")
 
             #If both players choose same pick announce it as a draw
             elif self.cpu_pick == self.user_pick:
