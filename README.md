@@ -1,3 +1,3 @@
-# rockPaper-py
+# rockPaper-py - Rock,Paper & Scissors game
 
-## Command Line - Rock Paper Scissors game written in Python3
+# This is a Python3 Rock, Paper & Scissors command line program
