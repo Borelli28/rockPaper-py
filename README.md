@@ -1,2 +1,3 @@
 # rockPaper-py
-Command Line - Rock Paper Scissors game
+
+##Command Line - Rock Paper Scissors game
