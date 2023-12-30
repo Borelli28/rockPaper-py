@@ -1,5 +1,3 @@
-# rockPaper-py - Rock,Paper & Scissors game
+# rockPaper-scissors - Rock,Paper & Scissors game
 
-##### This is a simple Python3 Rock, Paper & Scissors command line program
-
-###### P.S.: This was my first program using Python
+#### This is a simple Rock, Paper & Scissors program that you can run on the command line
