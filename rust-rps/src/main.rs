@@ -1,5 +1,5 @@
 use rand::Rng;
-use std::io::{stdin, stdout, Write};
+use std::io;
 
 
 fn bot_pick() -> &'static str {
@@ -12,17 +12,31 @@ fn bot_pick() -> &'static str {
     return pick;
 }
 
-fn user_pick() -> String {
-    let mut input = String::new();
-    print!("Rock[R], Paper[P], or Scissors[S]: ");
-    let _ = stdout().flush();
-    stdin().read_line(&mut input).expect("Failed to read line");
-    println!("You entered: {}", input.trim());
-    return input
+fn user_pick() -> &'static str {
+    println!("Rock[R], Paper[P], or Scissors[S]: ");
+
+    let mut input_raw = String::new();
+    io::stdin()
+        .read_line(&mut input_raw)
+        .expect("Failed to read line");
+
+    let input: &str = input_raw.as_str().trim();
+
+    if input == "R" || input == "r" {
+        return "Rock"
+    } else if input == "P" || input == "p" {
+        return "Paper"
+    } else if input == "S" || input == "s" {
+        return "Scissor"
+    } else {
+        return "None"
+    }
 }
 
 fn main() {
     println!("Hello, world!");
-    println!("{}", bot_pick());
-    user_pick();
+    // println!("bot picked: {}", bot_pick());
+
+    let user_pick = user_pick();
+    println!("You picked: {}", user_pick);
 }
