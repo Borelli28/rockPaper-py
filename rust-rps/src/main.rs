@@ -34,17 +34,23 @@ fn user_pick() -> &'static str {
 }
 
 fn calculate_winner(bot: &str, user: &str) -> &'static str {
-    println!("{}, {}", bot, user);
+    println!("Bot picked: {}, You picked: {}", bot, user);
 
-    return "yooo"
+    if bot == user {
+        return "Both"
+    } else if 
+    (bot == "Rock" && user == "Scissor") || 
+    (bot == "Paper" && user == "Rock") || 
+    (bot == "Scissor" && user == "Paper") { 
+        return "Bot"
+    } else {
+        return "User"
+    }
 }
 
 fn main() {
-    println!("Hello, world!");
-    // println!("bot picked: {}", bot_pick());
-
     let user_pick = user_pick();
-    println!("You picked: {}", user_pick);
 
-    calculate_winner(bot_pick(), user_pick);
+    let winner = calculate_winner(bot_pick(), user_pick);
+    println!("Winner: {}", winner);
 }
