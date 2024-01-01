@@ -49,12 +49,15 @@ fn calculate_winner(bot: &str, user: &str) -> &'static str {
 }
 
 fn main() {
-    let user_pick = user_pick();
-    // Check for invalid input
-    if user_pick == "None" {
-        eprintln!("Invalid Input. Please enter [R], [P], or [S]");
-    }
+    loop {
+        let user_pick = user_pick();
 
-    let winner = calculate_winner(bot_pick(), user_pick);
-    println!("Winner: {}", winner);
+        // Check for invalid input
+        if user_pick == "None" {
+            eprintln!("Invalid Input. Please enter [R], [P], or [S]");
+        }
+
+        let winner = calculate_winner(bot_pick(), user_pick);
+        println!("Winner: {}", winner);
+    }
 }
