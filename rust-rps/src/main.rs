@@ -33,10 +33,17 @@ fn user_pick() -> &'static str {
     }
 }
 
+fn who_won(bot: &str, user: &str) -> &'static str {
+    println!("{}, {}", bot, user);
+    return "yooo"
+}
+
 fn main() {
     println!("Hello, world!");
     // println!("bot picked: {}", bot_pick());
 
     let user_pick = user_pick();
     println!("You picked: {}", user_pick);
+
+    who_won(bot_pick(), user_pick);
 }
