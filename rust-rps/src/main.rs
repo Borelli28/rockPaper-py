@@ -33,8 +33,9 @@ fn user_pick() -> &'static str {
     }
 }
 
-fn who_won(bot: &str, user: &str) -> &'static str {
+fn calculate_winner(bot: &str, user: &str) -> &'static str {
     println!("{}, {}", bot, user);
+
     return "yooo"
 }
 
@@ -45,5 +46,5 @@ fn main() {
     let user_pick = user_pick();
     println!("You picked: {}", user_pick);
 
-    who_won(bot_pick(), user_pick);
+    calculate_winner(bot_pick(), user_pick);
 }
