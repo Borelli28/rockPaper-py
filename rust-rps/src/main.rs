@@ -20,13 +20,14 @@ fn user_pick() -> &'static str {
         .read_line(&mut input_raw)
         .expect("Failed to read line");
 
-    let input: &str = input_raw.as_str().trim();
+    let input_raw = input_raw.trim().to_lowercase();
+    let input: &str = input_raw.as_str();
 
-    if input == "R" || input == "r" {
+    if input == "r" {
         return "Rock"
-    } else if input == "P" || input == "p" {
+    } else if input == "p" {
         return "Paper"
-    } else if input == "S" || input == "s" {
+    } else if input == "s" {
         return "Scissor"
     } else {
         return "None"
