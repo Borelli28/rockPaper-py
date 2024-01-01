@@ -1,4 +1,4 @@
-# rockPaper-scissors - Rock, Paper & Scissors game
+# rockPaper-scissors
 
 ### This is a simple Rock, Paper & Scissors program that you can run on the command line
 
